@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Second Bloom | Megan Shaw</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="stylesheet" href="https://use.typekit.net/vgp3rvg.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <img id="bee-cursor" src="images/cursor.png" alt="cursor">
+
+    <div id="scroll-container">
+        <img src="images/butterfly.png" id="scroll-butterfly-img" alt="Butterfly">
+        <div id="scroll-arrow">↓</div>
+    </div>
+
+    <header id="landing">
+        <img src="images/flower1.png" class="landing-flower f1">
+        <img src="images/flower2.png" class="landing-flower f2">
+        <img src="images/flower3.png" class="landing-flower f3">
+        <img src="images/flower4.png" class="landing-flower f4">
+        <img src="images/flower5.png" class="landing-flower f5">
+        <img src="images/flower6.png" class="landing-flower f6">
+
+        <div id="landing-text-container">
+            <h1 class="bloom-js">Second Bloom</h1>
+            <p class="bloom-js">by Megan Shaw</p>
+        </div>
+    </header>
+
+    <section id="slideshow-section">
+        <h2 class="bloom-js">The Project</h2>
+        
+        <div id="slideshow-wrapper" class="bloom-js">
+            <button id="prev-slide" class="slide-btn">&#10094;</button>
+            
+            <div id="slideshow-container">
+                <img src="images/beeposter.jpg" class="slide active" alt="Gallery Photo 1">
+                <img src="images/butterflyposter.jpg" class="slide" alt="Gallery Photo 2">
+                <img src="images/birdposter.jpg" class="slide" alt="Gallery Photo 3">
+            </div>
+
+            <button id="next-slide" class="slide-btn">&#10095;</button>
+        </div>
+    </section>
+
+    <section id="the-process">
+        <h2 class="bloom-js">How to Make It</h2>
+        <div class="carousel-wrapper">
+            <div class="carousel bloom-js" id="processCarousel">
+                
+                <div class="carousel-item">
+                    <img src="images/step1.jpg" class="carousel-img">
+                    <p class="carousel-desc">Step 1: Gather your recycled paper and shred. I used a mixture of hand shreding and machine shreding.</p>
+                </div>
+                <div class="carousel-item">
+                    <img src="images/step2.jpg" class="carousel-img">
+                    <p class="carousel-desc">Step 2: Soak shreds in water for a few hours. I allowed my paper to soak overnight. </p>
+                </div>
+                <div class="carousel-item">
+                    <img src="images/step3.jpg" class="carousel-img">
+                    <p class="carousel-desc">Step 3: Blend shred and water mixure until pulp consistancy. Make sure to keep the mixure watery, as to not put stress on your blender.</p>
+                </div>
+                <div class="carousel-item">
+                    <img src="images/step4.jpg" class="carousel-img">
+                    <p class="carousel-desc">Step 4: If making multiple colors, seperate pulp into containers. I needed one for each poster. </p>
+                </div>
+                <div class="carousel-item">
+                    <img src="images/step5.jpg" class="carousel-img">
+                    <p class="carousel-desc">Step 5: Add your non-toxic dye. I used a mix of food coloring and non-toxic paint.</p>
+                </div>
+                <div class="carousel-item">
+                    <img src="images/step6.jpg" class="carousel-img">
+                    <p class="carousel-desc">Step 6: Prepare your mesh screen. I made mine out of repurposed wood and cheese cloth.</p>
+                </div>
+                <div class="carousel-item">
+                    <img src="images/step7.jpg" class="carousel-img">
+                    <p class="carousel-desc">Step 7: Pour the pulp evenly over the screen. Adding support under your mesh allows for more even distributing. </p>
+                </div>
+                <div class="carousel-item">
+                    <img src="images/step8.jpg" class="carousel-img">
+                    <p class="carousel-desc">Step 8: Sprinkle in your seeds, and press out water with a damp sponge. I used specific seeds for each different pollinator.</p>
+                </div>
+                <div class="carousel-item">
+                    <img src="images/step9.jpg" class="carousel-img">
+                    <p class="carousel-desc">Step 9: Let dry for as long as possible. Thinner papers may only take a couple days, but mine took a little over a week. </p>
+                </div>
+                <div class="carousel-item">
+                    <img src="images/step10.jpg" class="carousel-img">
+                    <p class="carousel-desc">Step 10: Design your desired imagery. Keep in mind that in order for a stencil to work, all "blank" sections must be touching.</p>
+                </div>
+                <div class="carousel-item">
+                    <img src="images/step11.jpg" class="carousel-img">
+                    <p class="carousel-desc">Step 11: Cut out your design. I used a laser cutting machine, but an exacto knife will absolutely work for simple designs.</p>
+                </div>
+                <div class="carousel-item">
+                    <img src="images/step12.jpg" class="carousel-img">
+                    <p class="carousel-desc">Step 12: If there are any sections that are not cut all the way through, remove with pointed took.</p>
+                </div>
+                <div class="carousel-item">
+                    <img src="images/step13.jpg" class="carousel-img">
+                    <p class="carousel-desc">Step 13: I created frames using scrap wood for my project, but trimming the edges or buying frame will work the same. </p>
+                </div>
+                <div class="carousel-item">
+                    <img src="images/step14.jpg" class="carousel-img">
+                    <p class="carousel-desc">Step 14: Lay stencil onto dried paper, and blot non-toxic ink onto the surface. I used an old brush.</p>
+                </div>
+                <div class="carousel-item">
+                    <img src="images/step15.jpg" class="carousel-img">
+                    <p class="carousel-desc">Step 15: Now you have your poster(s) finished and ready to be planted!</p>
+                </div>
+
+            </div>
+
+            <div class="custom-scrollbar-area bloom-js" id="customScrollbar">
+                <div class="scrollbar-fill" id="scrollbarFill"></div>
+                <img src="images/hummingbird.png" class="hummingbird-thumb" id="hummingbirdThumb" draggable="false">
+                <img src="images/flower.png" class="flower-end" draggable="false">
+            </div>
+        </div>
+    </section>
+
+    <section id="contribute">
+        <h2 class="bloom-js">How to Contribute</h2>
+        <div class="contribute-wrapper">
+            <div class="video-container bloom-js">
+                <video controls poster="placeholder.jpg">
+                    <source src="images/plantvideo.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="instructions bloom-js">
+                <h3>Plant Your Card!</h3>
+                <ol>
+                    <li class="bloom-js">Soak your card in water overnight.</li>
+                    <li class="bloom-js">Plant it under a small layer of soil.</li>
+                    <li class="bloom-js">Keep it watered in a sunny spot.</li>
+                    <li class="bloom-js">Watch our pollinators thrive!</li>
+                </ol>
+            </div>
+        </div>
+    </section>
+
+    <section id="resources">
+        <h2 class="bloom-js">How to Learn More</h2>
+        <div class="grid">
+            <a href="native-planting.html" class="card bloom-js">
+                <h3>Native Planting</h3>
+                <p>Find the best flowers for your local region.</p>
+            </a>
+            <a href="bee-conservation.html" class="card bloom-js">
+                <h3>Bee Conservation</h3>
+                <p>Learn how to protect our fuzzy friends.</p>
+            </a>
+            <a href="butterfly-gardens.html" class="card bloom-js">
+                <h3>Butterfly Gardens</h3>
+                <p>Places to support and view butterfly conservation.</p>
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        <h2 class="bloom-js">About the Artist</h2>
+        <p class="bloom-js">
+            Hello there! My name is Megan Shaw, and I am the artist behind "Second Bloom". I appreciate you taking the time to view my site and help support the pollinators! For more information about myself, or my work, please view my portfolio linked below.
+        </p>
+        <a href="https://meganshawportfolio.com" class="portfolio-btn bloom-js">View My Portfolio</a>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
