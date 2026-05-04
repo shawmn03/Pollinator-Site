@@ -1,8 +1,13 @@
 const cursor = document.getElementById('bee-cursor');
-document.addEventListener('mousemove', (e) => {
-    cursor.style.left = e.clientX + 'px';
-    cursor.style.top = e.clientY + 'px';
-});
+
+if (window.matchMedia("(pointer: fine)").matches) {
+    document.addEventListener('mousemove', (e) => {
+        cursor.style.left = e.clientX + 'px';
+        cursor.style.top = e.clientY + 'px';
+    });
+} else {
+    cursor.style.display = 'none';
+}
 
 const slides = document.querySelectorAll('.slide');
 const prevBtn = document.getElementById('prev-slide');
