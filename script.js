@@ -9,7 +9,6 @@ if (window.matchMedia("(pointer: fine)").matches) {
     cursor.style.display = 'none';
 }
 
-// SLIDESHOW LOGIC
 const slides = document.querySelectorAll('.slide');
 const prevBtn = document.getElementById('prev-slide');
 const nextBtn = document.getElementById('next-slide');
@@ -58,7 +57,6 @@ slideshowSection.addEventListener('mouseenter', stopSlideshow);
 slideshowSection.addEventListener('mouseleave', startSlideshow);
 startSlideshow();
 
-// SCROLL ANIMATION
 const scrollContainer = document.getElementById('scroll-container');
 let scrollTimeout;
 window.addEventListener('scroll', () => {
@@ -70,7 +68,6 @@ window.addEventListener('scroll', () => {
     scrollContainer.style.opacity = atBottom ? '0' : '1';
 });
 
-// HUMMINGBIRD CUSTOM SCROLLBAR (Updated for iOS Touch)
 const carousel = document.getElementById('processCarousel');
 const scrollbarArea = document.getElementById('customScrollbar');
 const thumb = document.getElementById('hummingbirdThumb');
@@ -93,7 +90,6 @@ carousel.addEventListener('scroll', () => {
 function handleMove(e) {
     if (!isDragging) return;
     
-    // Support both mouse and touch
     const clientX = e.touches ? e.touches[0].clientX : e.clientX;
     const rect = scrollbarArea.getBoundingClientRect();
     let clickX = clientX - rect.left;
@@ -106,7 +102,6 @@ function handleMove(e) {
     carousel.scrollLeft = percentage * maxScroll;
 }
 
-// Mouse Listeners
 scrollbarArea.addEventListener('mousedown', (e) => {
     isDragging = true;
     handleMove(e);
@@ -117,7 +112,6 @@ document.addEventListener('mouseup', () => {
     isDragging = false;
 });
 
-// Touch Listeners (iOS)
 scrollbarArea.addEventListener('touchstart', (e) => {
     isDragging = true;
     handleMove(e);
@@ -125,7 +119,7 @@ scrollbarArea.addEventListener('touchstart', (e) => {
 
 document.addEventListener('touchmove', (e) => {
     if (isDragging) {
-        e.preventDefault(); // Prevent page from scrolling while dragging bird
+        e.preventDefault();
         handleMove(e);
     }
 }, { passive: false });
@@ -134,7 +128,6 @@ document.addEventListener('touchend', () => {
     isDragging = false;
 });
 
-// ANIMATION LOGIC (BLOOM)
 function jsDramaticBloom(element) {
     let progress = 0;
     const animationSpeed = 0.02; 
