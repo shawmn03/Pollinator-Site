@@ -234,7 +234,6 @@ a, button { cursor: none; }
     position: relative; 
     cursor: none; 
     margin: 1.5rem auto 0 auto;
-    /* Added for iOS scrolling */
     touch-action: none;
 }
 .scrollbar-fill { position: absolute; top: 0; left: 0; height: 100%; width: 0%; background: var(--red); border-radius: 20px; }
@@ -405,14 +404,13 @@ body.resource-page {
     margin-bottom: 5px;
 }
 
-/* --- ADJUSTED: Subpage flower grid for 3-across --- */
 .flower-scatter-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     justify-items: center;
     align-content: center; 
     gap: clamp(1rem, 5vw, 3rem); 
-    padding: 2rem 12vw 6rem 12vw; /* Increased padding */
+    padding: 2rem 12vw 6rem 12vw; 
     flex-grow: 1; 
     width: 100vw;
     max-width: 100%;
@@ -462,7 +460,6 @@ body.resource-page {
     section h2 {
         font-size: 2.5rem;
     }
-    /* --- ADJUSTED: Slightly bigger project images on iOS/Mobile --- */
     #slideshow-container {
         width: 85vw;
         max-width: 90%;
