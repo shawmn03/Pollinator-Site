@@ -234,6 +234,8 @@ a, button { cursor: none; }
     position: relative; 
     cursor: none; 
     margin: 1.5rem auto 0 auto;
+    /* Added for iOS scrolling */
+    touch-action: none;
 }
 .scrollbar-fill { position: absolute; top: 0; left: 0; height: 100%; width: 0%; background: var(--red); border-radius: 20px; }
 .hummingbird-thumb { position: absolute; top: 50%; left: 0; transform: translate(-50%, -50%); width: 65px; z-index: 5; }
@@ -403,13 +405,14 @@ body.resource-page {
     margin-bottom: 5px;
 }
 
+/* --- ADJUSTED: Subpage flower grid for 3-across --- */
 .flower-scatter-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
     align-content: center; 
-    gap: clamp(2rem, 10vw, 6rem); 
-    padding: 1rem 5vw 6rem 5vw;
+    gap: clamp(1rem, 5vw, 3rem); 
+    padding: 2rem 12vw 6rem 12vw; /* Increased padding */
     flex-grow: 1; 
     width: 100vw;
     max-width: 100%;
@@ -422,7 +425,8 @@ body.resource-page {
     align-items: center;
     text-decoration: none;
     color: var(--dark-text);
-    width: clamp(120px, 12vw, 280px); 
+    width: 100%;
+    max-width: clamp(100px, 15vw, 240px);
     transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     position: relative;
     opacity: 1; 
@@ -436,11 +440,9 @@ body.resource-page {
 
 .flower-link:nth-child(even) { transform: translateY(-15px) rotate(6deg); }
 .flower-link:nth-child(odd) { transform: translateY(-15px) rotate(-4deg); }
-.flower-link:nth-child(3n) { transform: translateY(-15px) rotate(-8deg); }
-.flower-link:nth-child(5n) { transform: translateY(-15px) rotate(5deg); }
 
 .flower-link:hover {
-    transform: scale(1.3) translateY(-15px) !important; 
+    transform: scale(1.2) translateY(-15px) !important; 
     z-index: 10;
 }
 
@@ -459,6 +461,11 @@ body.resource-page {
     }
     section h2 {
         font-size: 2.5rem;
+    }
+    /* --- ADJUSTED: Slightly bigger project images on iOS/Mobile --- */
+    #slideshow-container {
+        width: 85vw;
+        max-width: 90%;
     }
     .instructions h3 {
         font-size: 1.8rem;
