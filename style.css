@@ -476,4 +476,11 @@ body.resource-page {
     .resource-header h1 {
         font-size: clamp(2.5rem, 8vw, 3.5rem);
     }
+    .flower-scatter-container {
+        grid-template-columns: repeat(2, 1fr); 
+        padding: 2rem 5vw 6rem 5vw; 
+    }
+    .flower-link {
+        max-width: clamp(140px, 35vw, 250px);
+    }
 }
